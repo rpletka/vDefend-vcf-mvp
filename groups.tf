@@ -76,10 +76,6 @@ resource "nsxt_policy_group" "critical_management" {
   }
 }
 
-data "nsxt_policy_segment" "vm_management_dvpg" {
-  display_name = var.vm_management_dvpg
-}
-
 resource "nsxt_policy_group" "m01_edges" {
   nsx_id       = "M01_EDGES"
   display_name = "M01_EDGES"
