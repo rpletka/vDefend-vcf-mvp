@@ -22,20 +22,12 @@ variable "bastion_cidrs" {
   default     = ["10.1.6.0/24", "192.168.3.0/24"]  # Replace with actual CIDRs
 }
 
-variable "vcf01_cidrs" {
-  description = "CIDR(s) for VCF01"
-  type        = list(string)
-  default     = ["10.1.1.0/24"]  # Replace with actual IP addresses or CIDRs
-}
-
 variable "automation_tools_cidrs" {
   description = "CIDR(s) for Automation Tools outside VCF"
   type        = list(string)
-#                   Horizon Connection Server, vRNI Proxy, vROps, SSP/Security Intelligence
+#                   Horizon Connection Server, vRNI Proxy, vROps
   default     = ["10.1.4.30", "10.1.4.21", "10.1.4.10"]  # Replace with actual CIDRs
 }
-
-
 
 variable "ssp_workload_dvpg" {default =  "Raxus_Prime_VDS.Workload"}
 variable "vm_management_dvpg" {default = "Raxus_Prime_VDS.S1-Management-VDS"}
