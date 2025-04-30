@@ -4,7 +4,8 @@
 variable "bastion_cidrs" {
   description = "CIDR(s) for Jump Hosts external to VCF"
   type        = list(string)
-  default     = ["172.61.71.0/24", "10.1.6.0/24"]  # Replace with actual CIDRs
+  #               VDI, VPN CIDRs
+  default     = ["10.1.6.0/24", "192.168.3.0/24"]  # Replace with actual CIDRs
 }
 
 variable "vcf01_cidrs" {
@@ -16,8 +17,8 @@ variable "vcf01_cidrs" {
 variable "automation_tools_cidrs" {
   description = "CIDR(s) for Automation Tools outside VCF"
   type        = list(string)
-#                       VPN CIDR ,Horizon CS1, vRNI Proxy 
-  default     = ["192.168.3.0/24", "10.1.4.30", "10.1.4.21"]  # Replace with actual CIDRs
+#                   Horizon CS1, vRNI Proxy, vROps, SSP/Security Intelligence
+  default     = ["10.1.4.30", "10.1.4.21", "10.1.4.10", "192.168.8.0/24"]  # Replace with actual CIDRs
 }
 
 # Configure the VMware NSX-T Provider using variables
