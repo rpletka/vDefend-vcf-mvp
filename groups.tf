@@ -80,16 +80,6 @@ data "nsxt_policy_segment" "vm_management_dvpg" {
   display_name = var.vm_management_dvpg
 }
 
-resource "nsxt_policy_group" "vcf01_mgmt" {
-  nsx_id       = "VCF01_MGMT"
-  display_name = "VCF01_MGMT"
-
-  criteria {
-    path_expression {
-      member_paths = [data.nsxt_policy_segment.vm_management_dvpg.path]
-    }
-  }
-}
 resource "nsxt_policy_group" "m01_edges" {
   nsx_id       = "M01_EDGES"
   display_name = "M01_EDGES"
