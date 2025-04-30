@@ -32,8 +32,6 @@ variable "automation_tools_cidrs" {
 variable nsx_sddc_vm {default = ["sddc-mgr"]}
 variable nsx_vCenter_vms {default = ["vcva"]}
 variable nsx_manager_vms {default = ["nsx-t-mgr"]}
-
-variable "vm_management_dvpg" {default = "Raxus_Prime_VDS.S1-Management-VDS"}
 variable "aria_segment" {default = "S1-Servers"}
 variable m01_hosts_range {default = ["10.1.1.10-10.1.1.13"]}
 variable "m01_edges_range" {default = ["10.1.1.200-10.1.1.207"]}
