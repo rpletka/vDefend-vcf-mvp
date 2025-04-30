@@ -1,14 +1,17 @@
 variable "nsxIP" {
     type = string
     sensitive = true
+    default = "nsx-mgr"
 }
 variable "nsxUser" {
     type = string
     sensitive = true
+    default = "admin"
 }
 variable "nsxPassword" {
     type = string
     sensitive = true
+    default = "VMware1!VMware1!"
 }
 
 # Define CIDR Variables
